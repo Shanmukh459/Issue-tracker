@@ -17,8 +17,10 @@ export async function PATCH(
     where: { id: parseInt(params.id) },
   })
 
-  if (!issue)
+  if (!issue) {
+    console.log("Issue not found")
     return NextResponse.json({ error: "Invalid issue" }, { status: 404 })
+  }
 
   const updatedIssue = await prisma.issue.update({
     where: { id: parseInt(params.id) },
