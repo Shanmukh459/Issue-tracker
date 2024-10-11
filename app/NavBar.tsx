@@ -11,7 +11,7 @@ const NavBar = () => {
 
   const links = [
     { label: "Dashboard", href: "/" },
-    { label: "Issues", href: "/issues" },
+    { label: "Issues", href: "/issues/list" },
   ]
   return (
     <nav className="flex space-x-6 mb-5 border-b px-4 h-14 items-center">
